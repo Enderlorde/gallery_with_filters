@@ -111,11 +111,18 @@ class GalleryView extends EventEmitter{
             imagesList = imagesList.filter((item) => item.tags.includes(filter));
         
         const galleryFiltersElement = document.createElement('div');
-        filters.forEach(filter => {
+        galleryFiltersElement.className = 'gallery__filters filters';
+        filters.forEach(item => {
             const galleryFiltersItem = document.createElement('button');
-            galleryFiltersItem.innerText = filter;
+            galleryFiltersItem.className = 'filters__item'
+            if (filter == item){
+                galleryFiltersItem.classList.add('active');
+            }
+            galleryFiltersItem.innerText = item;
             galleryFiltersItem.addEventListener('click', (event) => {
-                this.render(filter);
+                this.render(item);
+                event.preventDefault();
+                event.stopPropagation();
             });
             galleryFiltersElement.appendChild(galleryFiltersItem);
         });
