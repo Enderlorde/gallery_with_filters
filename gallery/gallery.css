@@ -1,0 +1,55 @@
+.gallery{
+   
+}
+
+.thumbs{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbs__item{
+    padding: 20px;
+}
+
+.gallery
+
+.preview{
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+
+.preview__overlay{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 1, 0.8);
+    z-index: 9999;   
+}
+
+.preview__picture{
+    object-fit: cover;  
+    width: 100%;
+}
+
+.preview__close{
+    position: absolute;
+    top:-40px;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
